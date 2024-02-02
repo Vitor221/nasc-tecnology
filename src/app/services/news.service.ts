@@ -11,7 +11,7 @@ interface NewsResponse {
   providedIn: 'root'
 })
 export class NewsService {
-  private endpointUrl = 'http://localhost:8080/usersubscribe';
+  private endpointUrl = 'https://api-nasc-tecnology.onrender.com/usersubscribe';
 
   constructor(private http: HttpClient) { }
 
