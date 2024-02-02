@@ -16,6 +16,6 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   sendData(userSubscribe: UserSubscribe): Observable<NewsResponse> {
-    return this.http.post<NewsResponse>(this.endpointUrl + "/usersubscribe", userSubscribe);
+    return this.http.post<NewsResponse>("/usersubscribe", userSubscribe);
   }
 }
