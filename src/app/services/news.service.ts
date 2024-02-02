@@ -11,11 +11,11 @@ interface NewsResponse {
   providedIn: 'root'
 })
 export class NewsService {
-  private endpointUrl = 'https://api-nasc-tecnology.onrender.com/usersubscribe';
+  private endpointUrl = 'https://api-nasc-tecnology.onrender.com';
 
   constructor(private http: HttpClient) { }
 
   sendData(userSubscribe: UserSubscribe): Observable<NewsResponse> {
-    return this.http.post<NewsResponse>(this.endpointUrl, userSubscribe);
+    return this.http.post<NewsResponse>(this.endpointUrl + "/usersubscribe", userSubscribe);
   }
 }
